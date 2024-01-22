@@ -60,7 +60,6 @@ namespace Foam
 // Forward Declarations
 //class Istream;
 //class Ostream;
-//class Colebrook;
 //
 ////Istream& operator>>(Istream&, Colebrook&);
 //Ostream& operator<<(Ostream&, const Colebrook&);
