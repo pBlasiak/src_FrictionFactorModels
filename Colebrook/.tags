@@ -1,0 +1,48 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A_	Colebrook.H	/^		scalar A_;$/;"	m	language:C++	class:Foam::Colebrook
+B_	Colebrook.H	/^		scalar B_;$/;"	m	language:C++	class:Foam::Colebrook
+C_	Colebrook.H	/^		scalar C_;$/;"	m	language:C++	class:Foam::Colebrook
+Cf	Colebrook.H	/^		const dimensionedScalar& Cf() const$/;"	f	language:C++	class:Foam::Colebrook
+Cf_	Colebrook.H	/^        dimensionedScalar Cf_;$/;"	m	language:C++	class:Foam::Colebrook
+Colebrook	Colebrook.C	/^Foam::Colebrook::Colebrook()$/;"	f	language:C++	class:Foam::Colebrook
+Colebrook	Colebrook.H	/^class Colebrook$/;"	c	language:C++	namespace:Foam
+Colebrook.C	Colebrook.C	1;"	F	language:C++
+Colebrook.H	Colebrook.H	1;"	F	language:C++
+Colebrook_H	Colebrook.H	51;"	d	language:C++
+D_	Colebrook.H	/^		scalar D_;$/;"	m	language:C++	class:Foam::Colebrook
+Dh_	Colebrook.H	/^        dimensionedScalar Dh_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam	Colebrook.H	/^namespace Foam$/;"	n	language:C++
+Foam::Colebrook	Colebrook.H	/^class Colebrook$/;"	c	language:C++	namespace:Foam
+Foam::Colebrook::A_	Colebrook.H	/^		scalar A_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::B_	Colebrook.H	/^		scalar B_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::C_	Colebrook.H	/^		scalar C_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::Cf	Colebrook.H	/^		const dimensionedScalar& Cf() const$/;"	f	language:C++	class:Foam::Colebrook
+Foam::Colebrook::Cf_	Colebrook.H	/^        dimensionedScalar Cf_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::Colebrook	Colebrook.C	/^Foam::Colebrook::Colebrook()$/;"	f	language:C++	class:Foam::Colebrook
+Foam::Colebrook::D_	Colebrook.H	/^		scalar D_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::Dh_	Colebrook.H	/^        dimensionedScalar Dh_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::Uin_	Colebrook.H	/^        dimensionedScalar Uin_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::calcCf	Colebrook.C	/^Foam::dimensionedScalar Foam::Colebrook::calcCf()$/;"	f	language:C++	class:Foam::Colebrook
+Foam::Colebrook::calcRe	Colebrook.C	/^Foam::dimensionedScalar Foam::Colebrook::calcRe()$/;"	f	language:C++	class:Foam::Colebrook
+Foam::Colebrook::conv_	Colebrook.H	/^		const scalar conv_ = 1e-12;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::ebyDh_	Colebrook.H	/^		scalar ebyDh_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::eta_	Colebrook.H	/^        dimensionedScalar eta_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::maxIters_	Colebrook.H	/^		const label maxIters_ = 1000;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::operator <<	Colebrook.H	/^        friend Ostream& operator<<(Ostream& os, const Colebrook& cb)$/;"	f	language:C++	class:Foam::Colebrook
+Foam::Colebrook::rho_	Colebrook.H	/^        dimensionedScalar rho_;$/;"	m	language:C++	class:Foam::Colebrook
+Foam::Colebrook::~Colebrook	Colebrook.C	/^Foam::Colebrook::~Colebrook()$/;"	f	language:C++	class:Foam::Colebrook
+Uin_	Colebrook.H	/^        dimensionedScalar Uin_;$/;"	m	language:C++	class:Foam::Colebrook
+calcCf	Colebrook.C	/^Foam::dimensionedScalar Foam::Colebrook::calcCf()$/;"	f	language:C++	class:Foam::Colebrook
+calcRe	Colebrook.C	/^Foam::dimensionedScalar Foam::Colebrook::calcRe()$/;"	f	language:C++	class:Foam::Colebrook
+conv_	Colebrook.H	/^		const scalar conv_ = 1e-12;$/;"	m	language:C++	class:Foam::Colebrook
+ebyDh_	Colebrook.H	/^		scalar ebyDh_;$/;"	m	language:C++	class:Foam::Colebrook
+eta_	Colebrook.H	/^        dimensionedScalar eta_;$/;"	m	language:C++	class:Foam::Colebrook
+maxIters_	Colebrook.H	/^		const label maxIters_ = 1000;$/;"	m	language:C++	class:Foam::Colebrook
+operator <<	Colebrook.H	/^        friend Ostream& operator<<(Ostream& os, const Colebrook& cb)$/;"	f	language:C++	class:Foam::Colebrook
+rho_	Colebrook.H	/^        dimensionedScalar rho_;$/;"	m	language:C++	class:Foam::Colebrook
+~Colebrook	Colebrook.C	/^Foam::Colebrook::~Colebrook()$/;"	f	language:C++	class:Foam::Colebrook

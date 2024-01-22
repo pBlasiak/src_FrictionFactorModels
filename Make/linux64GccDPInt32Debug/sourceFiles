@@ -1,0 +1,11 @@
+SOURCE = \
+HeliumModels/HeliumModel/HeliumModel.C \
+HeliumModels/HeliumModel/HeliumModelNew.C \
+HeliumThermalConductivityModels/HeliumThermalConductivityModel/HeliumThermalConductivityModel.C \
+HeliumThermalConductivityModels/HeliumThermalConductivityModel/HeliumThermalConductivityModelNew.C \
+HeliumThermalConductivityModels/Hepak/Hepak.C \
+HeliumModels/Helium/Helium.C \
+HeliumLibrary/HeliumLibrary.C \
+singlePhaseHeliumTransportModel/singlePhaseHeliumTransportModel.C \
+
+# sources
