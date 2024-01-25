@@ -27,9 +27,9 @@ Class
     Foam::Colebrook
 
 Description
-	The class for calculation of Fanning friction factor Cf for a rough wall.
+	The class for calculation of Darcy friction factor Cf for a rough wall.
 	Currently it computes Cf from Colebrook correlation for a rough wall.
-	In future, it can be extended to Colebrook be an abstract class
+	In future, it can be extended to some an abstract class
 	and implement specific derived clases, e.g. Colebrook.
 
 	Solved equation is of the form:
@@ -73,6 +73,7 @@ class Colebrook
 //:
 //    public baseClassName
 {
+private:
     // Private Data
 
 		//- A constant
@@ -149,7 +150,18 @@ public:
         Colebrook();
 
         //- Construct from components
-        //Colebrook(const dataType& data);
+        Colebrook
+		(
+			const dimensionedScalar& rho,
+			const dimensionedScalar& Uin,
+			const dimensionedScalar& Dh,
+			const dimensionedScalar& eta,
+			const scalar ebyDh = 1.4e-4,
+			const scalar A = 4.0,
+			const scalar B = 3.7,
+			const scalar C = 1.25,
+			const scalar D = 0 
+		);
 
         //- Copy construct
         //Colebrook(const Colebrook&);
@@ -162,7 +174,7 @@ public:
 
 
     //- Destructor
-    ~Colebrook();
+    ~Colebrook() = default;
 
 
     // Member Functions
@@ -170,7 +182,7 @@ public:
 
     // Access
 		
-		//- Returns friction factor
+		//- Returns Darcy friction factor
 		const dimensionedScalar& Cf() const
 		{
 			return Cf_;
@@ -197,7 +209,7 @@ public:
 //        friend Istream& operator>>(Istream&, Colebrook&);
         friend Ostream& operator<<(Ostream& os, const Colebrook& cb)
 		{
-			return os << cb.Cf();
+			return os << "Darcy friction factor is Cf = " << cb.Cf() << endl;
 		}
 };
 

@@ -52,17 +52,18 @@ Foam::dimensionedScalar Foam::Colebrook::calcCf()
 	{
 		Cf.value() = Cf_.value();
 		const scalar Re = calcRe().value();
-		Info<< "Re = " << Re << endl;
 		Cf_.value() = 1.0/pow(max(-A_*log10(ebyDh_/B_ + C_/(Re*sqrt(Cf.value()))) + D_, SMALL),2);
 		nIters++;
 	}
 	while ((mag(Cf.value() - Cf_.value()) > conv_) && (nIters < maxIters_));
 
-	Info<< "Cf convergence achived within: " << nIters << " interations." << endl;
+	// formula for Cf implemented is for Fanning friction
+	// factor which is 4 times lower than Darcy friction factor
+	Info<< endl;
+	Info<< "Re = " << calcRe() << endl;
+	Cf.value() = 4*Cf_.value(); 
 	Info<< "Cf =  " << Cf_.value() << endl;
-	Info<< "4xCf =  " << 4*Cf_.value() << endl;
-
-	Cf.value() = Cf_.value();
+	Info<< endl;
 		
 	return Cf;
 }
@@ -75,7 +76,7 @@ Foam::dimensionedScalar Foam::Colebrook::calcCf()
 
 Foam::Colebrook::Colebrook()
 :
-	// Default are for superfluid helium at p = 1 bar and T = 1.7 K
+	// Default are taken from https://doi.org/10.1016/j.cryogenics.2008.02.004
 	A_{4.0},
 	B_{3.7},
 	C_{1.25},
@@ -90,18 +91,23 @@ Foam::Colebrook::Colebrook()
 {}
 
 
-//Foam::Colebrook::Colebrook(const dataType& data)
-//:
-//    baseClassName(),
-//    data_(data)
-//{}
-//
-//
-//Foam::Colebrook::Colebrook(const Colebrook&)
-//:
-//    baseClassName(),
-//    data_()
-//{}
+Foam::Colebrook::Colebrook
+(
+	const dimensionedScalar& rho,
+	const dimensionedScalar& Uin,
+	const dimensionedScalar& Dh,
+	const dimensionedScalar& eta,
+	const scalar ebyDh,
+	const scalar A,
+	const scalar B,
+	const scalar C,
+	const scalar D
+)
+:
+	A_{A}, B_{B}, C_{C}, D_{D}, ebyDh_{ebyDh},
+	rho_{rho}, Uin_{Uin}, Dh_{Dh}, eta_{eta},
+	Cf_{calcCf()}
+{ }
 
 
 // * * * * * * * * * * * * * * * * Selectors * * * * * * * * * * * * * * * * //
@@ -109,8 +115,6 @@ Foam::Colebrook::Colebrook()
 
 // * * * * * * * * * * * * * * * * Destructor  * * * * * * * * * * * * * * * //
 
-Foam::Colebrook::~Colebrook()
-{}
 
 
 // * * * * * * * * * * * * * * Member Functions  * * * * * * * * * * * * * * //
